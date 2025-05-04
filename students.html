@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ученики 9Б класса</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .navbar a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: blue;
+    }
+    
+    .students {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .student-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      width: 200px;
+      background-color: #f9f9f9;
+    }
+    
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: blue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px auto;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Сайт 9Б класса</h1>
+    <div>
+      <a href="index.html">Главная</a>
+      <a href="students.html">Ученики</a>
+      <a href="achievements.html">Достижения</a>
+      <a href="events.html">Мероприятия</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Ученики 9Б класса</h1>
+    
+    <div class="students">
+      <div class="student-card">
+        <div class="avatar">А</div>
+        <h3>Алексей Иванов</h3>
+        <p>Староста</p>
+      </div>
+      
+      <div class="student-card">
+        <div class="avatar">М</div>
+        <h3>Мария Петрова</h3>
+        <p>Зам. старосты</p>
+      </div>
+      
+      <div class="student-card">
+        <div class="avatar">Д</div>
+        <h3>Дмитрий Сидоров</h3>
+        <p>Спортсмен</p>
+      </div>
+      
+      <div class="student-card">
+        <div class="avatar">Е</div>
+        <h3>Екатерина Смирнова</h3>
+        <p>Активистка</p>
+      </div>
+      
+      <div class="student-card">
+        <div class="avatar">П</div>
+        <h3>Павел Кузнецов</h3>
+        <p>Умный</p>
+      </div>
+      
+      <div class="student-card">
+        <div class="avatar">А</div>
+        <h3>Анна Соколова</h3>
+        <p>Отличница</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
