@@ -1,45 +1,62 @@
 
-import React from 'react';
 import Navbar from '../components/Navbar';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-const Students = () => {
-  const students = [
-    { id: 1, name: 'Алексей Иванов', role: 'Староста', avatar: 'https://source.unsplash.com/random/200x200/?boy,1' },
-    { id: 2, name: 'Мария Петрова', role: 'Зам. старосты', avatar: 'https://source.unsplash.com/random/200x200/?girl,1' },
-    { id: 3, name: 'Дмитрий Сидоров', role: 'Спортивный сектор', avatar: 'https://source.unsplash.com/random/200x200/?boy,2' },
-    { id: 4, name: 'Екатерина Смирнова', role: 'Культурный сектор', avatar: 'https://source.unsplash.com/random/200x200/?girl,2' },
-    { id: 5, name: 'Павел Кузнецов', role: 'Редколлегия', avatar: 'https://source.unsplash.com/random/200x200/?boy,3' },
-    { id: 6, name: 'Анна Соколова', role: 'Учебный сектор', avatar: 'https://source.unsplash.com/random/200x200/?girl,3' },
+function Students() {
+  const ученики = [
+    { имя: 'Алексей Иванов', роль: 'Староста' },
+    { имя: 'Мария Петрова', роль: 'Зам. старосты' },
+    { имя: 'Дмитрий Сидоров', роль: 'Спортсмен' },
+    { имя: 'Екатерина Смирнова', роль: 'Активистка' },
+    { имя: 'Павел Кузнецов', роль: 'Умный' },
+    { имя: 'Анна Соколова', роль: 'Отличница' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div>
       <Navbar />
       
-      <div className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-8 text-center text-blue-700">Ученики 9Б класса</h1>
+      <div style={{ 
+        padding: "20px",
+        textAlign: "center" 
+      }}>
+        <h1 style={{ color: "blue" }}>Ученики 9Б класса</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {students.map((student) => (
-            <Card key={student.id} className="hover:shadow-lg transition-shadow">
-              <CardHeader className="flex items-center">
-                <Avatar className="w-20 h-20 mb-2">
-                  <AvatarImage src={student.avatar} />
-                  <AvatarFallback>{student.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
-                <CardTitle className="text-xl mt-2">{student.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600">{student.role}</p>
-              </CardContent>
-            </Card>
+        <div style={{ 
+          display: "flex", 
+          flexWrap: "wrap", 
+          justifyContent: "center", 
+          gap: "15px", 
+          marginTop: "20px" 
+        }}>
+          {ученики.map((ученик, индекс) => (
+            <div key={индекс} style={{ 
+              border: "1px solid #ccc", 
+              borderRadius: "5px", 
+              padding: "15px", 
+              width: "200px",
+              backgroundColor: "#f9f9f9"
+            }}>
+              <div style={{ 
+                width: "50px", 
+                height: "50px", 
+                borderRadius: "50%", 
+                backgroundColor: "blue", 
+                color: "white", 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                margin: "0 auto 10px auto"
+              }}>
+                {ученик.имя[0]}
+              </div>
+              <h3>{ученик.имя}</h3>
+              <p>{ученик.роль}</p>
+            </div>
           ))}
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Students;

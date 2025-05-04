@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import Students from './pages/Students';
 import NotFound from './pages/NotFound';
@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/students" element={<Students />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/events" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
